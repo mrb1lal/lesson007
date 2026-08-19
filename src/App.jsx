@@ -10,9 +10,9 @@ export default function App() {
     <div>
       <Navbar  />
       <Banner /> 
-      <Aside />
-      <Cards />
-      <Cardsfooter />
+      <Aside id="about" />
+      <Cards id="services" />
+      <Cardsfooter id="contact" />
     </div>
   )
 }

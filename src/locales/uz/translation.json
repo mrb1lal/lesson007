@@ -1,9 +1,38 @@
 {
   "navbar": {
-    "brand": "I18n",
+    "brand": "Positivus",
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "useCases": "Foydalanish holatlari",
+    "pricing": "Narxlar",
+    "blog": "Blog",
+    "quote": "Taklif so'rash",
     "contact": "Aloqa"
+  },
+  "banner": {
+    "title": "Muvaffaqiyat uchun <br/> raqamli manzarani <br/> boshqarish",
+    "description": "Bizning raqamli marketing agentligimiz bizneslarni <br/> SEO, PPC, ijtimoiy media marketingi,<br/> va kontent yaratish kabi xizmatlar yordamida <br/> onlayn rivojlantirish va muvaffaqiyatga erishishda yordam beradi.",
+    "cta": "Maslahat olishni band qiling"
+  },
+  "aside": {
+    "title": "xizmatlar",
+    "description": "Bizning raqamli marketing agentligimizda bizneslar onlayn rivojlanishi va muvaffaqiyatga erishi uchun yordam beradigan bir qator xizmatlar mavjud. Ular quyidagilarni o'z ichiga oladi:"
+  },
+  "cards": {
+    "seo": {
+      "title1": "Qidiruv tizimi",
+      "title2": "optimizatsiyasi"
+    },
+    "ppc": {
+      "title1": "Har bir bosish uchun",
+      "title2": "reklama"
+    },
+    "learnMore": "Batafsil"
+  },
+  "cardsfooter": {
+    "title": "Keling, narsalarni amalga oshiramiz",
+    "description": "Bugun biz bilan bog'laning, bizning raqamli marketing xizmatlarimiz qanday qilib sizning biznesingizning onlayn rivojlanishi va muvaffaqiyatga erishishiga yordam berishi haqida bilib oling."
   },
   "hero": {
     "title": "Ilovangizni har qanday tilga tayyorlang",

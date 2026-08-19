@@ -1,14 +1,17 @@
-import React from 'react'
-import './Aside.css'
-export default function Aside() {
+import { useTranslation } from "react-i18next";
+import "./Aside.css";
+
+export default function Aside({ id }) {
+  const { t } = useTranslation();
+
   return (
-    <div>
+    <div id={id}>
       <div className="aside_wrapper">
         <div className="aside_left">
-          <h1>services</h1>
+          <h1>{t("aside.title")}</h1>
         </div>
-        <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+        <p>{t("aside.description")}</p>
       </div>
     </div>
-  )
+  );
 }

@@ -58,7 +58,7 @@
   color: white;
 }
 
-/* Responsive Burger Menu styling */
+/* Burger Menu */
 .burger_menu {
   display: none;
   flex-direction: column;
@@ -77,23 +77,9 @@
   height: 3px;
   background-color: var(--dark);
   border-radius: 2px;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Burger Menu Animation on toggle */
-.burger_bar.open:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg);
-}
-
-.burger_bar.open:nth-child(2) {
-  opacity: 0;
-}
-
-.burger_bar.open:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg);
-}
-
-/* Language selector */
+/* Language selector - desktop */
 .select {
   padding: 8px 16px;
   border-radius: 8px;
@@ -110,9 +96,14 @@
   color: white;
 }
 
+/* Mobile styles */
 @media (max-width: 992px) {
   .burger_menu {
     display: flex;
+  }
+
+  .select {
+    display: none; /* Hide desktop selector on mobile */
   }
 
   .navbar {
@@ -126,6 +117,8 @@
     padding: 100px 30px 40px;
     z-index: 1000;
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
   }
 
   .navbar.active {
@@ -158,9 +151,27 @@
     font-size: 18px;
   }
 
-  .select {
-    margin-left: 0;
-    margin-top: 20px;
+  /* Mobile language selector inside menu */
+  .mobile_lang_wrapper {
+    margin-top: auto;
+    padding-top: 30px;
     width: 100%;
+  }
+
+  .mobile_lang_wrapper .select {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #191a23;
+    background-color: transparent;
+    color: #191a23;
+    cursor: pointer;
+  }
+
+  .mobile_lang_wrapper .select:hover {
+    background-color: var(--dark);
+    color: white;
   }
 }

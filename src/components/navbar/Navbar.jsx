@@ -37,9 +37,9 @@ const Navbar = () => {
         onClick={toggleMenu}
         aria-label="Toggle navigation"
       >
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
+        <span className="burger_bar"></span>
+        <span className="burger_bar"></span>
+        <span className="burger_bar"></span>
       </button>
 
       <nav className={`navbar ${isOpen ? "active" : ""}`}>
@@ -75,19 +75,21 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-      </nav>
 
-      <select
-        className="select"
-        value={i18n.language}
-        onChange={(e) => i18n.changeLanguage(e.target.value)}
-      >
-        {language.map((item) => (
-          <option key={item.code} value={item.code}>
-            {item.label}
-          </option>
-        ))}
-      </select>
+        <div className="mobile_lang_wrapper">
+          <select
+            className="select"
+            value={i18n.language}
+            onChange={(e) => i18n.changeLanguage(e.target.value)}
+          >
+            {language.map((item) => (
+              <option key={item.code} value={item.code}>
+                {item.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      </nav>
     </header>
   );
 };

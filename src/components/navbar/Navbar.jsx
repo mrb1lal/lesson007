@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../../assets/logo.png";
 import "./Navbar.css";
@@ -10,12 +11,18 @@ const language = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
     }
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -27,14 +34,15 @@ const Navbar = () => {
 
       <button
         className="burger_menu"
+        onClick={toggleMenu}
         aria-label="Toggle navigation"
       >
-        <span className="burger_bar"></span>
-        <span className="burger_bar"></span>
-        <span className="burger_bar"></span>
+        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
+        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
+        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
       </button>
 
-      <nav className="navbar">
+      <nav className={`navbar ${isOpen ? "active" : ""}`}>
         <ul>
           <li>
             <a className="nav_link" href="#" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>

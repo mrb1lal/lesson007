@@ -1,0 +1,33 @@
+.banne_wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 50px;
+}
+
+.banner_left h1 {
+  text-align: left;
+  font-size: 60px;
+  text-align: left;
+  color: var(--dark);
+}
+
+.banner_left p {
+  text-align: left;
+  font-size: 15px;
+  text-align: left;
+  color: var(--dark);
+}
+
+.banner_left_btn {
+  background-color: var(--dark);
+  color: white;
+  width: 264px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 30px;
+}

@@ -1,0 +1,47 @@
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 100%;
+  padding: 20px;
+} 
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-wrapper h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none; /* Nuqtalarni olib tashlaydi */
+  margin: 0;
+  padding: 0;
+}
+
+.nav_link {
+  color: #191a23;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.quote_btn {
+  background-color: transparent;
+  padding: 16px 35px;
+  border-radius: 14px;
+  border: 1px solid #191a23;
+  font-size: 18px;
+  cursor: pointer;
+  white-space: nowrap;
+}

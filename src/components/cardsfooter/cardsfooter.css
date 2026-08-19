@@ -1,0 +1,13 @@
+.cardsfooter_container {
+  max-width: 1240px;
+  height: 347px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardsfooter_container h1 {
+  font-size: 50px;
+  color: var(--dark);
+}

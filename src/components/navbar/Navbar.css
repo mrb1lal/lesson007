@@ -6,6 +6,7 @@
   max-width: 1240px;
   width: 100%;
   padding: 20px;
+  position: relative;
 } 
 
 .navbar-wrapper {
@@ -24,7 +25,7 @@
   display: flex;
   align-items: center;
   gap: 40px;
-  list-style: none; /* Nuqtalarni olib tashlaydi */
+  list-style: none; 
   margin: 0;
   padding: 0;
 }
@@ -34,6 +35,11 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav_link:hover {
+  color: var(--green);
 }
 
 .quote_btn {
@@ -44,4 +50,94 @@
   font-size: 18px;
   cursor: pointer;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.quote_btn:hover {
+  background-color: var(--dark);
+  color: white;
+}
+
+/* Responsive Burger Menu styling */
+.burger_menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burger_bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Burger Menu Animation on toggle */
+.burger_bar.open:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger_bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burger_bar.open:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+@media (max-width: 992px) {
+  .burger_menu {
+    display: flex;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    padding: 100px 30px 40px;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .nav_link {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .quote_btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 18px;
+  }
 }

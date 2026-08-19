@@ -1,36 +1,29 @@
-.navbar_container {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   max-width: 1240px;
-  width: 100%;
+  margin: 0 auto;
   padding: 20px;
-  position: relative;
-} 
-
-.navbar-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  width: 100%;
 }
 
-.navbar-wrapper h1 {
+.navbar h2 {
+  margin: 0;
   font-size: 28px;
   font-weight: 700;
-  margin: 0;
 }
 
 .navbar ul {
   display: flex;
   align-items: center;
   gap: 40px;
-  list-style: none; 
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav_link {
+.navbar ul li a {
   color: #191a23;
   text-decoration: none;
   font-size: 18px;
@@ -38,106 +31,42 @@
   transition: color 0.2s ease;
 }
 
-.nav_link:hover {
+.navbar ul li a:hover {
   color: var(--green);
 }
 
-.quote_btn {
-  background-color: transparent;
-  padding: 16px 35px;
-  border-radius: 14px;
+.select {
+  padding: 8px 16px;
+  border-radius: 8px;
   border: 1px solid #191a23;
-  font-size: 18px;
+  background-color: transparent;
+  font-size: 16px;
   cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #191a23;
 }
 
-.quote_btn:hover {
+.select:hover {
   background-color: var(--dark);
   color: white;
 }
 
-/* Responsive Burger Menu styling */
-.burger_menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1001;
-}
-
-.burger_bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--dark);
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Burger Menu Animation on toggle */
-.burger_bar.open:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg);
-}
-
-.burger_bar.open:nth-child(2) {
-  opacity: 0;
-}
-
-.burger_bar.open:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg);
-}
-
-@media (max-width: 992px) {
-  .burger_menu {
-    display: flex;
-  }
-
+@media (max-width: 768px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
-    padding: 100px 30px 40px;
-    z-index: 1000;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .navbar.active {
-    right: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
   }
 
   .navbar ul {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 30px;
-    width: 100%;
+    gap: 20px;
   }
 
-  .navbar ul li {
-    width: 100%;
+  .navbar ul li a {
+    font-size: 16px;
   }
 
-  .nav_link {
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .quote_btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-    font-size: 18px;
+  .select {
+    padding: 6px 12px;
+    font-size: 14px;
   }
 }

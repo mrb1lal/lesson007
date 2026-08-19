@@ -1,61 +1,46 @@
-import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+const language = [
+  { code: "uz", label: "Uzbek" },
+  { code: "en", label: "English" },
+  { code: "ru", label: "Russian" },
+];
+
+const Navbar = () => {
+  const { t, i18n } = useTranslation();
 
   return (
-    <header className="navbar_container">
-      <div className="navbar-wrapper">
-        <img className="logo" src={logo} alt="Positivus logo" />
-        <h1>Positivus</h1>
-      </div>
-      
-      <button 
-        className="burger_menu" 
-        onClick={() => setIsOpen(!isOpen)} 
-        aria-label="Toggle navigation"
-      >
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
-        <span className={`burger_bar ${isOpen ? "open" : ""}`}></span>
-      </button>
+    <div className="navbar">
+      <h2>{t("navbar.brand")}</h2>
 
-      <nav className={`navbar ${isOpen ? "active" : ""}`}>
-        <ul>
-          <li>
-            <a className="nav_link" href="#" onClick={() => setIsOpen(false)}>
-              About us
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#" onClick={() => setIsOpen(false)}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#" onClick={() => setIsOpen(false)}>
-              Use Cases
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#" onClick={() => setIsOpen(false)}>
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#" onClick={() => setIsOpen(false)}>
-              Blog
-            </a>
-          </li>
-          <li>
-            <button className="quote_btn" onClick={() => setIsOpen(false)}>
-              Request a quote
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <ul>
+        <li>
+          <a href="">{t("navbar.home")}</a>
+        </li>
+        <li>
+          <a href="">{t("navbar.about")}</a>
+        </li>
+        <li>
+          <a href="">{t("navbar.contact")}</a>
+        </li>
+      </ul>
+
+      <select
+        className="select"
+        value={i18n.language}
+        onChange={(e) => i18n.changeLanguage(e.target.value)}
+      >
+        {language.map((item) => {
+          return (
+            <option key={item.code} value={item.code}>
+              {item.label}
+            </option>
+          );
+        })}
+      </select>
+    </div>
   );
-}
+};
+
+export default Navbar;

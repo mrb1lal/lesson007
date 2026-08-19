@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "brand": "I18n",
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "title": "Ilovangizni har qanday tilga tayyorlang",
+    "subtitle": "React va i18next bilan tez, moslashuvchan ko'p tilli tizim yarating.",
+    "cta": "Boshlash"
+  },
+  "footer": {
+    "copyright": "Copyright 2023"
+  }
+}

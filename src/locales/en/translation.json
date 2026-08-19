@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "brand": "I18n",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Get your app ready for any language",
+    "subtitle": "Build a fast, flexible multilingual system with React and i18next.",
+    "cta": "Get started"
+  },
+  "footer": {
+    "copyright": "Copyright 2023"
+  }
+}
